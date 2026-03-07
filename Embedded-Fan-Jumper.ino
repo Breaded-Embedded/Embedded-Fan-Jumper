@@ -1,4 +1,4 @@
-#include <AlashIRControlRX.h>
+// #include <AlashIRControlRX.h>
 
 const int RECIEVER_PIN = 7;
 const int FAN_PIN = A0;
@@ -15,14 +15,14 @@ uint64_t button = 0;
 
 
 
-AlashIRControlRX irReceiver(7);
+// AlashIRControlRX irReceiver(7);
 
 int buttonCodeToNum(int code);
 bool withinTolerance(int newVal, int old, int tolerance);
 
 void setup() {
     Serial.begin(115200);
-    irReceiver.begin();
+    // irReceiver.begin();
 }
 
 void loop() {
@@ -48,10 +48,10 @@ void loop() {
     joystickMovement = newJoystickMovement;
   }
 
-  if (irReceiver.check()) {
-    change = true;
-    button = irReceiver.data;
-  }
+  // if (irReceiver.check()) {
+  //   change = true;
+  //   button = irReceiver.data;
+  // }
 
 
   if(change) {
